@@ -1,4 +1,1 @@
-# lakshay.github.io
-# lakshay resume
-# lakshay
-# lakshay
+# This is a resume website
