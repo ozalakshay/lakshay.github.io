@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Personal Portfolio</title>
+    <title>LAKSHAY OZA <img src="./Images/google-icon.png" alt="Google Icon" /> Lakshay Oza</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -233,6 +234,7 @@
       .project-links {
         display: flex;
         gap: 1rem;
+        margin-bottom: 1rem;
       }
 
       .btn-small {
@@ -242,6 +244,71 @@
 
       .btn-outline {
         background-color: white;
+      }
+
+      /* Expandable Description Section */
+      .project-description {
+        border-top: 1px solid #ddd;
+        background-color: #fafafa;
+      }
+
+      .description-toggle {
+        width: 100%;
+        padding: 1rem 1.5rem;
+        background: none;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 0.95rem;
+        font-weight: 500;
+        color: var(--accent-color);
+        transition: var(--transition);
+      }
+
+      .description-toggle:hover {
+        background-color: #f0f0f0;
+      }
+
+      .toggle-icon {
+        font-size: 1.2rem;
+        transition: transform 0.3s ease;
+      }
+
+      .description-toggle.active .toggle-icon {
+        transform: rotate(180deg);
+      }
+
+      .description-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+      }
+
+      .description-content.active {
+        max-height: 500px; /* Adjust based on your content */
+      }
+
+      .description-text {
+        padding: 0 1.5rem 1.5rem 1.5rem;
+        color: var(--text-light);
+        line-height: 1.7;
+      }
+
+      .description-text h4 {
+        color: var(--primary-color);
+        margin-bottom: 0.5rem;
+        font-size: 1.1rem;
+      }
+
+      .description-text ul {
+        margin: 1rem 0;
+        padding-left: 1.5rem;
+      }
+
+      .description-text li {
+        margin-bottom: 0.5rem;
       }
 
       /* Skills */
@@ -390,6 +457,10 @@
           flex-wrap: wrap;
           gap: 0.5rem;
         }
+
+        .description-content.active {
+          max-height: 800px;
+        }
       }
 
       /* Animation classes */
@@ -408,7 +479,7 @@
   <body>
     <!-- Navigation -->
     <nav>
-      <div class="nav-logo">REALLY GREAT SITE</div>
+      <div class="nav-logo">LAKSHAY OZA 💭</div>
       <ul class="nav-links">
         <li><a href="#home">HOME</a></li>
         <li><a href="#projects">PROJECTS</a></li>
@@ -431,11 +502,12 @@
         <div class="hero-content">
           <h1>Hi! I'm Lakshay Oza</h1>
           <h2>
-            Google Cloud Certified Professional Architect | Cloud & DevOps
-            Engineer
+            Google Cloud Certified Professional Architect <br /><u
+              >Cloud & DevOps Engineer</u
+            >
           </h2>
           <p>
-            I’m a <u>Google Cloud Certified Professional Architect (PCA)</u>,
+            I'm a <u>Google Cloud Certified Professional Architect (PCA)</u>,
             passionate about Cloud Engineering and DevOps. <br />
             I enjoy learning and practicing cloud-native technologies, building
             automation workflows, and deploying scalable solutions using tools
@@ -454,110 +526,223 @@
       <div class="video-section">
         <h2>Watch My Introduction</h2>
         <div class="video-container">
-          <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/MJyKN-8UncM?si=ps8TG_7RH8WeEpdT"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen
-          ></iframe>
+         
+            <iframe
+              width="356"
+              height="634"
+              src="https://www.youtube.com/embed/dDDl-81RSrI"
+              title="Introduction video"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div>
+            
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="section">
-      <h2 class="section-title">My Projects</h2>
-      <div class="projects-grid">
-        <div class="project-card animate-element">
-          <div class="project-video">
-            <iframe
-              width="560"
-              height="315"
-              src="https://www.youtube.com/embed/JgDNFQ2RaLQ?si=YczXdyzd9uVBT0LB"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen
-            ></iframe>
-          </div>
-          <div class="project-content">
-            <h3>E-Commerce Platform</h3>
-            <p>
-              A fully responsive e-commerce website with shopping cart
-              functionality and payment integration.
-            </p>
-            <div class="project-links">
-              <a href="#" class="btn btn-small">Live Demo</a>
-              <a href="#" class="btn btn-small btn-outline">GitHub</a>
-            </div>
+
+<section id="projects" class="section">
+  <h2 class="section-title">My Projects</h2>
+  <div class="projects-grid">
+    <div class="project-card animate-element">
+      <div class="project-video">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/mkmBmk2wztc?si=4DU4pPXZnxbSk9Yc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+      <div class="project-content">
+        <h3>Linux CLI Debugging in Docker Environment</h3>
+        <p>Debugged app issues in a Dockerized Linux setup using core CLI tools like <code>grep</code>, <code>vim</code>, and <code>chmod</code> and other most widely used linux commands.</p>
+        <div class="project-links">
+          <a href="#" class="btn btn-small">Live Demo</a> <a href="#" class="btn btn-small btn-outline">GitHub</a>
+        </div>
+      </div>
+      <div class="project-description">
+        <button class="description-toggle" onclick="toggleDescription(this)"><span>Project Details</span> <span class="toggle-icon">▼</span></button>
+        <div class="description-content">
+          <div class="description-text">
+            <h4>Project Overview</h4>
+            <p>This hands-on Linux troubleshooting environment was set up using Docker to simulate real-world production issues. The project focused on practicing essential command-line tools used in server maintenance and debugging within a Linux-based system.</p>
+            <h4>Key Features</h4>
+            <ul>
+              <li>Navigated and analyzed Linux file systems in a containerized environment</li>
+              <li>Used tools like <code>grep</code>, <code>cat</code>, and <code>diff</code> to inspect logs and identify errors</li>
+              <li>Modified configuration files using <code>vim</code> and other editors</li>
+              <li>Adjusted file permissions and ownership with <code>chmod</code> and <code>chown</code></li>
+              <li>Verified service behavior and endpoints using <code>curl</code></li>
+              <li>Worked within a realistic Docker-based Linux terminal setup</li>
+            </ul>
+            <h4>Technologies Used</h4>
+            <p>Core Tools: Bash, Linux CLI (grep, cat, diff, chmod, vim, curl)<br>
+            Environment: Docker (Debian-based container)<br>
+            Other: VS Code Dev Containers, Terminal-based Debugging</p>
+            <h4>Challenges & Solutions</h4>
+            <p>The main challenge was identifying and resolving application issues in a minimal Linux environment without a graphical interface. This was overcome through methodical log inspection, command-line editing, and permission corrections using standard Linux utilities.</p>
           </div>
         </div>
-
-        <div class="project-card animate-element">
-          <div class="project-video">
-            <iframe
-              width="560"
-              height="315"
-              src="https://www.youtube.com/embed/d_HlPboLRL8?si=aHKW6ya3crKEFs2y"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen
-            ></iframe>
-          </div>
-          <div class="project-content">
-            <h3>Task Management App</h3>
-            <p>
-              A collaborative task management application with real-time updates
-              and team features.
-            </p>
-            <div class="project-links">
-              <a href="#" class="btn btn-small">Live Demo</a>
-              <a href="#" class="btn btn-small btn-outline">GitHub</a>
-            </div>
+      </div>
+    </div>
+    <div class="project-card animate-element">
+      <div class="project-video"><img src="./Images/project-quote-output.png" width="100%" alt="project-quote-output"></div>
+      <div class="project-content">
+        <h3>Cloud Deployment: Quote Generator on Google Cloud</h3>
+        <p>A simple quote generator web application deployed on Google Cloud using Node.js and Terraform.Set up HTTP firewall rules, handled infrastructure provisioning, and exposed the application to the public internet.</p>
+        <div class="project-links">
+          <a href="#" class="btn btn-small">Live Demo</a> <a href="#" class="btn btn-small btn-outline">GitHub</a>
+        </div>
+      </div>
+      <div class="project-description">
+        <button class="description-toggle" onclick="toggleDescription(this)"><span>Project Details</span> <span class="toggle-icon">▼</span></button>
+        <div class="description-content">
+          <div class="description-text">
+            <h4>Project Overview</h4>
+            <p>This project involved deploying a simple quote generator web application using Node.js, HTML, CSS, and JavaScript on a Google Cloud Compute Engine virtual machine. It demonstrated full-stack deployment and infrastructure setup using both manual CLI and Infrastructure as Code (IaC) principles with Terraform.</p>
+            <h4>Key Features</h4>
+            <ul>
+              <li>Created and configured a VM instance using <code>gcloud</code> CLI and automated the same process using <code>Terraform</code></li>
+              <li>Installed Node.js, cloned the application repository via SSH, and launched the Express.js app on <code>port 3000</code></li>
+              <li>Defined and applied GCP firewall rules to allow HTTP traffic to the VM instance</li>
+              <li>Managed background service execution and validated application availability through the VM's public IP</li>
+              <li>Used <code>terraform apply</code> to provision infrastructure and <code>terraform destroy</code> for clean-up</li>
+            </ul>
+            <h4>Technologies Used</h4>
+            <p>Cloud Platform: Google Cloud Platform (Compute Engine)<br>
+            Infrastructure as Code: Terraform<br>
+            Backend Stack: Node.js, Express.js<br>
+            Frontend: HTML, CSS, JavaScript<br>
+            Tools: gcloud CLI, SSH, Linux (Debian), Git<br>
+            Networking: HTTP firewall rules, public IP routing</p>
+            <h4>Challenges & Solutions</h4>
+            <p>One of the key challenges was automating infrastructure setup to be reusable and configurable. This was addressed by using Terraform to define infrastructure as code, ensuring consistency and ease of deployment. Another challenge was securing and exposing the app publicly, which required correctly configuring firewall rules to allow inbound traffic on the required port.</p>
           </div>
         </div>
-
-        <div class="project-card animate-element">
-          <div class="project-video">
-            <iframe
-              width="560"
-              height="315"
-              src="https://www.youtube.com/embed/kY7a_ReAcas?si=-BodFmDRlwMAGra9"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen
-            ></iframe>
-          </div>
-          <div class="project-content">
-            <h3>Weather Dashboard</h3>
-            <p>
-              Real-time weather application with location-based forecasts and
-              interactive maps.
-            </p>
-            <div class="project-links">
-              <a href="#" class="btn btn-small">Live Demo</a>
-              <a href="#" class="btn btn-small btn-outline">GitHub</a>
+      </div>
+    </div>
+    <div class="project-card animate-element">
+      <div class="project-video">
+        <img src="./Images/go-app.png" width="100%" alt="go-app">
+      </div>
+      <div class="project-content">
+        <h3>CI/CD Pipeline for Go Web App using GitOps Approach</h3>
+        <p>Designed and deployed a Golang web application using a GitOps CI/CD workflow. Gained hands-on experience with Docker, GitHub Actions, Kubernetes (GKE), and ArgoCD, deploying to GCP and exposing the app via Ingress.</p>
+        <div class="project-links">
+          <a href="#" class="btn btn-small">Live Demo</a> <a href="#" class="btn btn-small btn-outline">GitHub</a>
+        </div>
+      </div>
+      <div class="project-description">
+          <button class="description-toggle" onclick="toggleDescription(this)"><span>Project Details</span> <span class="toggle-icon">▼</span></button>
+          <div class="description-content">
+            <div class="description-text">
+              <h4>Project Overview</h4>
+              <p>Built a lightweight web server in Golang and deployed it on Google Kubernetes Engine (GKE) using a full CI/CD pipeline. The application is continuously delivered using ArgoCD with GitOps practices. It is publicly accessible via a GCP Ingress controller at <code>go-web.local</code>.</p>
+              <h4>Key Features</h4>
+              <ul>
+                <li>Developed a simple web server in Go using <code>net/http</code> to serve course data on <code>/courses</code></li>
+                <li>Wrote a custom <code>Dockerfile</code> to containerize the Go app and pushed the image to a remote container registry</li>
+                <li>Configured <code>GitHub Actions</code> to automate building, testing, and pushing Docker images on every code commit</li>
+                <li>Created Kubernetes manifests for <code>Deployment</code>, <code>Service</code>, and <code>Ingress</code> to manage resources on GKE</li>
+                <li>Set up <code>ArgoCD</code> to monitor a Git repository and automatically sync the deployment state to the GKE cluster</li>
+                <li>Configured GCP's <code>Ingress</code> to expose the application to the public at <code>http://go-web.local</code></li>
+              </ul>
+              <h4>Technologies Used</h4>
+              <p>Language: Golang<br>
+              CI/CD: GitHub Actions, ArgoCD<br>
+              Containerization: Docker (Dockerfile)<br>
+              Orchestration: Kubernetes (GKE)<br>
+              GitOps: ArgoCD<br>
+              Infrastructure: GCP (GKE, Ingress, Cloud Shell)<br>
+              Dev Tools: Git, Docker Hub, YAML, K8s manifests</p>
+              <h4>Hands-On Experience</h4>
+              <ul>
+                <li>Wrote and optimized a production-ready Dockerfile for the Go app</li>
+                <li>Created and applied Kubernetes <code>Deployment</code>, <code>Service</code>, and <code>Ingress</code> YAMLs</li>
+                <li>Used <code>kubectl</code> to manage cluster resources and troubleshoot deployment issues</li>
+                <li>Set up GitHub Actions workflow with custom YAML for CI pipeline</li>
+                <li>Deployed and monitored the app using the ArgoCD web UI</li>
+              </ul>
+              <h4>Challenges & Solutions</h4>
+              <p>Faced challenges in synchronizing GitHub Actions with ArgoCD deployment timing and resolving Ingress DNS routing on GCP. Addressed them by refining the GitOps sync strategy and validating Ingress and DNS configurations step-by-step using <code>kubectl describe</code> and <code>gcloud</code> tools.</p>
             </div>
           </div>
         </div>
       </div>
-    </section>
+      <div class="project-card animate-element">
+        <div class="project-video"><img src="./Images/architecture-diagram-ob.png" width="100%" alt="architecture-diagram-ob"></div>
+        <div class="project-content">
+          <h3>Linux CLI Debugging in Docker Environment</h3>
+          <p>Debugged app issues in a Dockerized Linux setup using core CLI tools like <code>grep</code>, <code>vim</code>, and <code>chmod</code> and other most widely used linux commands.</p>
+          <div class="project-links">
+            <a href="#" class="btn btn-small">Live Demo</a> <a href="#" class="btn btn-small btn-outline">GitHub</a>
+          </div>
+        </div>
+        <div class="project-description">
+          <button class="description-toggle" onclick="toggleDescription(this)"><span>Project Details</span> <span class="toggle-icon">▼</span></button>
+          <div class="description-content">
+            <div class="description-text">
+      <h4>Project Overview</h4>
+      <p>
+        Deployed the full-featured <strong>Online Boutique</strong> microservices application provided by Google Cloud to
+        understand how modern, large-scale distributed systems are structured and managed in production environments. This demo runs on
+        Google Kubernetes Engine (GKE) and showcases gRPC-based service communication, horizontal scaling, and cloud-native observability.
+      </p>
+
+      <h4>Hands-On Experience</h4>
+      <ul>
+        <li>Created a GKE Autopilot cluster and applied Kubernetes manifests to deploy 11 interconnected microservices</li>
+        <li>Explored how each microservice communicates over gRPC and discovered how service orchestration is handled</li>
+        <li>Examined real-time metrics and logs through <code>kubectl logs</code> and GCP's Cloud Operations tools</li>
+        <li>Analyzed service dependencies, crash recovery, and how Redis, gRPC, and JSON-based product catalogs are used in production</li>
+        <li>Used <code>kubectl</code> and <code>gcloud</code> CLI for deployment, monitoring, and cluster cleanup</li>
+      </ul>
+
+      <h4>Architecture Highlights</h4>
+      <p>
+        The app includes services written in Go, Python, Node.js, Java, and C#. They simulate real-world features like checkout,
+        product recommendations, email notifications, currency conversion, and ads. All services communicate using Protocol Buffers
+        and gRPC, with Redis used as an in-memory store.
+      </p>
+      <ul>
+        <li>Frontend (Go) serves the web UI</li>
+        <li>Cart, checkout, shipping, and payment services mimic full e-commerce functionality</li>
+        <li>Ad and recommendation engines enhance personalization</li>
+        <li>Email service and load generator simulate post-purchase flow and traffic</li>
+      </ul>
+
+      <h4>Cloud Tools & Technologies Used</h4>
+      <p>
+        Kubernetes (GKE), gRPC, Docker, Redis, Cloud Monitoring, Cloud Logging, Git, Protocol Buffers, GCP Ingress, Spanner (optional variant)
+      </p>
+
+      <h4>Outcome</h4>
+      <p>
+        This project helped me understand how microservices are deployed and managed on cloud-native infrastructure, how services interact
+        in real time, and how to investigate issues via centralized logging and monitoring. It gave me hands-on insight into
+        infrastructure that closely resembles enterprise production systems.
+      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- -------------------------------------------------------------------------------- -->
 
     <!-- Skills Section -->
     <section id="skills" class="section" style="text-align: center">
       <h2 class="section-title">My Skills</h2>
       <div class="skills-grid">
         <div class="skill-category animate-element">
-          <h3>Frontend</h3>
+          <!-- <h3>Frontend</h3> -->
           <ul class="skill-list">
             <li>HTML5</li>
             <li>CSS3</li>
@@ -567,21 +752,22 @@
           </ul>
         </div>
         <div class="skill-category animate-element">
-          <h3>CI/CD</h3>
+          <!-- <h3>CI/CD</h3> -->
           <ul class="skill-list">
-            <li>Docker</li>
-            <li>Kubernetes</li>
-            <li>Github Actions</li>
             <li>Google Cloud Platform(GCP)</li>
             <li>AWS</li>
+            <li>Docker</li>
+            <li>Kubernetes</li>
+            <li>Terraform</li>
+            <li>Github Actions</li>
           </ul>
         </div>
         <div class="skill-category animate-element">
-          <h3>Tools</h3>
+          <!-- <h3>Tools</h3> -->
           <ul class="skill-list">
             <li>Git</li>
-            <li>VS Code</li>
-            <li>Figma</li>
+            <li>ArgoCD</li>
+            <li>Jenkins</li>
             <li>Word, Powerpoint, Excel</li>
             <li>ServiceNow</li>
           </ul>
@@ -594,18 +780,38 @@
       <h2 class="section-title">Certifications</h2>
       <div class="certifications-grid">
         <div class="certification-card animate-element">
-          <h3>Google Cloud Professional Cloud Architect</h3>
+          <h3>Professional Cloud Architect Certification</h3>
           <p>Google</p>
+          <a
+            href="https://www.credly.com/badges/1758295a-70b0-48f3-96e8-779d3b7e56d3/public_url"
+            target="_blank"
+            >View Certificate</a
+          >
+          <br />
           <span class="cert-date">Issued: July 2024</span>
+          <br />
+          <span class="cert-date">Valid Until: July 2026</span>
         </div>
         <div class="certification-card animate-element">
-          <h3>AWS Certified Solutions Architect</h3>
-          <p>Amazon Web Services</p>
+          <h3>GCP Google Cloud Professional DevOps Engineer Certification</h3>
+          <p>Udemy</p>
+          <a
+            href="https://www.udemy.com/certificate/UC-da1a7346-c416-4156-a425-59fc3cb053e8/"
+            target="_blank"
+            >View Certificate</a
+          >
+          <br />
           <span class="cert-date">Issued: December 2023</span>
         </div>
         <div class="certification-card animate-element">
-          <h3>Google Data Analytics Professional</h3>
+          <h3>Introduction to Generative AI</h3>
           <p>Google</p>
+          <a
+            href="https://partner.cloudskillsboost.google/public_profiles/1c0f9e82-6a08-4523-b5fd-1d274e147254/badges/6081232"
+            target="_blank"
+            >View Certificate</a
+          >
+          <br />
           <span class="cert-date">Issued: November 2023</span>
         </div>
       </div>
@@ -668,6 +874,20 @@
           }
         });
       });
+
+      // Toggle project description
+      function toggleDescription(button) {
+        const content = button.nextElementSibling;
+        const isActive = button.classList.contains("active");
+
+        if (isActive) {
+          button.classList.remove("active");
+          content.classList.remove("active");
+        } else {
+          button.classList.add("active");
+          content.classList.add("active");
+        }
+      }
 
       // Intersection Observer for animations
       const observerOptions = {
